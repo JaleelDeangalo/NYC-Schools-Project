@@ -16,6 +16,11 @@
 		3208A4882AA7FC5F0021BEC1 /* NYC_Schools_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208A4872AA7FC5F0021BEC1 /* NYC_Schools_ProjectTests.swift */; };
 		3208A4922AA7FC5F0021BEC1 /* NYC_Schools_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208A4912AA7FC5F0021BEC1 /* NYC_Schools_ProjectUITests.swift */; };
 		3208A4942AA7FC5F0021BEC1 /* NYC_Schools_ProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208A4932AA7FC5F0021BEC1 /* NYC_Schools_ProjectUITestsLaunchTests.swift */; };
+		3208A4A12AA7FD3B0021BEC1 /* Schools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208A4A02AA7FD3B0021BEC1 /* Schools.swift */; };
+		3208A4A32AA7FDB70021BEC1 /* SchoolsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208A4A22AA7FDB70021BEC1 /* SchoolsViewModel.swift */; };
+		3208A4A52AA7FE840021BEC1 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208A4A42AA7FE840021BEC1 /* Networking.swift */; };
+		3208A4A72AA935930021BEC1 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208A4A62AA935930021BEC1 /* UITableViewCell.swift */; };
+		3208A4A92AA9445D0021BEC1 /* SATScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208A4A82AA9445D0021BEC1 /* SATScores.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		3208A48D2AA7FC5F0021BEC1 /* NYC Schools ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NYC Schools ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3208A4912AA7FC5F0021BEC1 /* NYC_Schools_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYC_Schools_ProjectUITests.swift; sourceTree = "<group>"; };
 		3208A4932AA7FC5F0021BEC1 /* NYC_Schools_ProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYC_Schools_ProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3208A4A02AA7FD3B0021BEC1 /* Schools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schools.swift; sourceTree = "<group>"; };
+		3208A4A22AA7FDB70021BEC1 /* SchoolsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsViewModel.swift; sourceTree = "<group>"; };
+		3208A4A42AA7FE840021BEC1 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		3208A4A62AA935930021BEC1 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		3208A4A82AA9445D0021BEC1 /* SATScores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SATScores.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +116,11 @@
 				3208A4792AA7FC5F0021BEC1 /* Assets.xcassets */,
 				3208A47B2AA7FC5F0021BEC1 /* LaunchScreen.storyboard */,
 				3208A47E2AA7FC5F0021BEC1 /* Info.plist */,
+				3208A4A02AA7FD3B0021BEC1 /* Schools.swift */,
+				3208A4A22AA7FDB70021BEC1 /* SchoolsViewModel.swift */,
+				3208A4A42AA7FE840021BEC1 /* Networking.swift */,
+				3208A4A62AA935930021BEC1 /* UITableViewCell.swift */,
+				3208A4A82AA9445D0021BEC1 /* SATScores.swift */,
 			);
 			path = "NYC Schools Project";
 			sourceTree = "<group>";
@@ -258,9 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3208A4A32AA7FDB70021BEC1 /* SchoolsViewModel.swift in Sources */,
+				3208A4A92AA9445D0021BEC1 /* SATScores.swift in Sources */,
 				3208A4752AA7FC5F0021BEC1 /* ViewController.swift in Sources */,
 				3208A4712AA7FC5F0021BEC1 /* AppDelegate.swift in Sources */,
+				3208A4A52AA7FE840021BEC1 /* Networking.swift in Sources */,
 				3208A4732AA7FC5F0021BEC1 /* SceneDelegate.swift in Sources */,
+				3208A4A72AA935930021BEC1 /* UITableViewCell.swift in Sources */,
+				3208A4A12AA7FD3B0021BEC1 /* Schools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
