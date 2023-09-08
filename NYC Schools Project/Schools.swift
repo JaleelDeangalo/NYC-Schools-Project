@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Schools: Codable, Hashable {
+struct Schools: Codable {
     let dbn, schoolName, numOfSatTestTakers, satCriticalReadingAvgScore: String
     let satMathAvgScore, satWritingAvgScore: String
     

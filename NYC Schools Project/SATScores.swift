@@ -11,14 +11,9 @@ import UIKit
 class SATScoresView: UIViewController {
     
     
+ 
     init(mathScores: String, writingScores: String, readingScores: String) {
-        self.mathSATScore.text = mathScores
-        self.writingSATScore.text = writingScores
-        self.readingSATScore.text = readingScores
-        
-      //  print(mathScores)
-       // print(writingScores)
-       // print(readingScores)
+        self.mathSATScore.text = "SAT Scores, Math: \(mathScores), Writing: \(writingScores), Reading: \(readingScores)"
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -28,6 +23,7 @@ class SATScoresView: UIViewController {
     
     private var mathSATScore: UILabel = {
         let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 13)
         return label
     }()
     
@@ -46,9 +42,22 @@ class SATScoresView: UIViewController {
         self.view.addSubview(readingSATScore)
         self.view.addSubview(writingSATScore)
         
+        self.mathSATScore.translatesAutoresizingMaskIntoConstraints = false
+     
+        
         NSLayoutConstraint.activate([
       
+            self.mathSATScore.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 20),
+            self.mathSATScore.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 20),
+            self.mathSATScore.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+            self.mathSATScore.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 20),
+            
+            
+         
+            
+            
         
+            
         ])
     }
     

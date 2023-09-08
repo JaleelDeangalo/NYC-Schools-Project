@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
        let viewModel = SchoolsViewModel()
     
     private lazy var tableView: UITableView = {
@@ -75,7 +74,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let dataPoint = viewModel.schoolsData[indexPath.row]
-      
         
         let vc = SATScoresView(mathScores: dataPoint.satMathAvgScore, writingScores: dataPoint.satWritingAvgScore, readingScores: dataPoint.satCriticalReadingAvgScore)
         
