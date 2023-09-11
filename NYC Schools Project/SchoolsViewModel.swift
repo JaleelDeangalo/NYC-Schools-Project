@@ -11,14 +11,28 @@ import UIKit
 
 class SchoolsViewModel: ObservableObject {
     
-    lazy var schoolsData = [Schools]()
+    @Published var schoolsData = [SchoolSATScores]()
+    
+    @Published var schools = [Schools]()
+    
+    @MainActor
+    func getSchools(pageNumber: Int, completion: @escaping (Bool) -> ()) async {
+        do {
+            let data = try await SchoolsNetworking.shared.getAllSchools(number: pageNumber)
+            self.schools = data
+            completion(true)
+        } catch {
+            print(error)
+            completion(false)
+        }
+    }
     
     
     @MainActor
-    func getData(completion: @escaping (Bool) -> ()) async {
+    func getSchoolSATData(dbnId: String, completion: @escaping (Bool) -> ()) async {
        
         do {
-            let data = try await SchoolsNetworking.shared.getSchoolData()
+            let data = try await SchoolsNetworking.shared.getSchoolData(schoolDBN: dbnId)
             self.schoolsData = data
             completion(true)
         } catch {
@@ -27,7 +41,6 @@ class SchoolsViewModel: ObservableObject {
         }
         
     }
-
     
     
 }

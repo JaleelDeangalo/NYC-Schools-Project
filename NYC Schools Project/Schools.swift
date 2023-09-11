@@ -7,7 +7,32 @@
 
 import Foundation
 
+
+
 struct Schools: Codable {
+       let dbn, schoolName, primaryAddressLine1, city, stateCode,
+           totalStudents, zip, latitude, phoneNumber, website: String
+       let graduationRate: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case dbn
+        case city
+        case zip
+        case latitude
+        case website
+        case graduationRate = "graduation_rate"
+        case primaryAddressLine1 = "primary_address_line_1"
+        case stateCode = "state_code"
+        case schoolName = "school_name"
+        case totalStudents = "total_students"
+        case phoneNumber = "phone_number"
+      
+    }
+    
+}
+
+
+struct SchoolSATScores: Codable {
     let dbn, schoolName, numOfSatTestTakers, satCriticalReadingAvgScore: String
     let satMathAvgScore, satWritingAvgScore: String
     
@@ -20,6 +45,8 @@ struct Schools: Codable {
         case satWritingAvgScore = "sat_writing_avg_score"
     }
 }
+
+
 
 enum APIError: Error {
     case invalidURL

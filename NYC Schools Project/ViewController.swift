@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     private func setUpViews() {
         self.view.addSubview(self.tableView)
-        // self.tableView.backgroundColor = .red
+        
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -39,14 +39,12 @@ class ViewController: UIViewController {
         self.setUpViews()
         
         Task {
-            await viewModel.getData { result in
+            await viewModel.getSchools(pageNumber: 3) { [weak self] result in
                 if result {
-                    self.tableView.reloadData()
+                    self?.tableView.reloadData()
                 }
-                
             }
         }
-        
         
     }
 
@@ -60,7 +58,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             fatalError("Could not deque cell")
         }
         
-        let schoolName = viewModel.schoolsData[indexPath.row].schoolName
+        let schoolName = viewModel.schools[indexPath.row].schoolName
         cell.configure(labelText: schoolName)
         
         return cell
@@ -68,14 +66,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.schoolsData.count
+        return viewModel.schools.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let dataPoint = viewModel.schoolsData[indexPath.row]
+        let data = viewModel.schools[indexPath.row]
         
-        let vc = SATScoresView(mathScores: dataPoint.satMathAvgScore, writingScores: dataPoint.satWritingAvgScore, readingScores: dataPoint.satCriticalReadingAvgScore)
+        let vc = SATScoresView(schoolData: data, viewModel: viewModel)
         
         self.navigationController?.pushViewController(vc, animated: true)
   
