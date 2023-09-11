@@ -9,7 +9,11 @@ import XCTest
 
 final class NYC_Schools_ProjectUITests: XCTestCase {
 
+    
+  
     override func setUpWithError() throws {
+        
+       
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
@@ -28,6 +32,23 @@ final class NYC_Schools_ProjectUITests: XCTestCase {
         app.launch()
 
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    
+    func testSchoolsAPIUrl() {
+        
+      let url = URL(string: "https://data.cityofnewyork.us/resource/s3k6-pzi2.json?$limit=\(30)&$offset=\(3)")
+        
+        XCTAssertNotNil(url)
+        
+    }
+    
+    func testSchoolsSATScoresAPIUrl() async {
+        
+      let url = URL(string: "https://data.cityofnewyork.us/resource/f9bf-2cp4.json?dbn=\("")")
+        
+        XCTAssertNotNil(url)
+       
     }
 
     func testLaunchPerformance() throws {

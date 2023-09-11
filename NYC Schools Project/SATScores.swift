@@ -10,7 +10,6 @@ import UIKit
 
 class SATScoresView: UIViewController {
     
-    
     private let data: Schools
     private let viewModel: SchoolsViewModel
     
@@ -24,24 +23,58 @@ class SATScoresView: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private var SATScores: UILabel = {
+    private var writingScore: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 13)
+        label.font = UIFont.systemFont(ofSize: 15)
+        return label
+    }()
+    
+    private var mathScore: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 15)
+        return label
+    }()
+    
+    private var readingScore: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 15)
+        return label
+    }()
+    
+    private var schoolTitle: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 15)
+        label.font = .boldSystemFont(ofSize: 15)
         return label
     }()
     
     private func setUpUI() {
-        self.view.addSubview(SATScores)
+        self.view.addSubview(writingScore)
+        self.view.addSubview(mathScore)
+        self.view.addSubview(readingScore)
+        self.view.addSubview(schoolTitle)
         
-        self.SATScores.translatesAutoresizingMaskIntoConstraints = false
+        self.writingScore.translatesAutoresizingMaskIntoConstraints = false
+        self.mathScore.translatesAutoresizingMaskIntoConstraints = false
+        self.readingScore.translatesAutoresizingMaskIntoConstraints = false
+        self.schoolTitle.translatesAutoresizingMaskIntoConstraints = false
      
         
         NSLayoutConstraint.activate([
       
-            self.SATScores.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 20),
-            self.SATScores.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 20),
-            self.SATScores.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
-            self.SATScores.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 20),
+            self.schoolTitle.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor),
+            self.schoolTitle.leadingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.leadingAnchor, constant: 10),
+            
+            self.writingScore.topAnchor.constraint(equalTo: schoolTitle.bottomAnchor, constant: 50),
+            self.writingScore.leadingAnchor.constraint(equalTo: self.view.layoutMarginsGuide.leadingAnchor, constant: 30),
+            
+            self.mathScore.topAnchor.constraint(equalTo: writingScore.bottomAnchor, constant: 20),
+            self.mathScore.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 30),
+            
+            self.readingScore.topAnchor.constraint(equalTo: mathScore.bottomAnchor, constant: 20),
+            self.readingScore.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 30)
+            
+            
             
         ])
     }
@@ -54,7 +87,15 @@ class SATScoresView: UIViewController {
 
                 for data in self.viewModel.schoolsData {
                     DispatchQueue.main.async {
-                        self.SATScores.text = "SAT Scores, Math: \(data.satMathAvgScore), Writing: \(data.satWritingAvgScore), Reading: \(data.satCriticalReadingAvgScore)"
+                        self.schoolTitle.text = data.schoolName
+                        
+                        self.writingScore.text = "SAT Average Writing Score: \(data.satWritingAvgScore)"
+                        
+                        self.mathScore.text = "SAT Average Math Score: \(data.satMathAvgScore)"
+                        
+                        self.readingScore.text = "SAT Average Reading Score: \(data.satCriticalReadingAvgScore)"
+                        
+                     
                     }
                   
                 }

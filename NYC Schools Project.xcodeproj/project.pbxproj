@@ -14,13 +14,14 @@
 		3208A47A2AA7FC5F0021BEC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3208A4792AA7FC5F0021BEC1 /* Assets.xcassets */; };
 		3208A47D2AA7FC5F0021BEC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3208A47B2AA7FC5F0021BEC1 /* LaunchScreen.storyboard */; };
 		3208A4882AA7FC5F0021BEC1 /* NYC_Schools_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208A4872AA7FC5F0021BEC1 /* NYC_Schools_ProjectTests.swift */; };
-		3208A4922AA7FC5F0021BEC1 /* NYC_Schools_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208A4912AA7FC5F0021BEC1 /* NYC_Schools_ProjectUITests.swift */; };
 		3208A4942AA7FC5F0021BEC1 /* NYC_Schools_ProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208A4932AA7FC5F0021BEC1 /* NYC_Schools_ProjectUITestsLaunchTests.swift */; };
 		3208A4A12AA7FD3B0021BEC1 /* Schools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208A4A02AA7FD3B0021BEC1 /* Schools.swift */; };
 		3208A4A32AA7FDB70021BEC1 /* SchoolsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208A4A22AA7FDB70021BEC1 /* SchoolsViewModel.swift */; };
 		3208A4A52AA7FE840021BEC1 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208A4A42AA7FE840021BEC1 /* Networking.swift */; };
 		3208A4A72AA935930021BEC1 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208A4A62AA935930021BEC1 /* UITableViewCell.swift */; };
 		3208A4A92AA9445D0021BEC1 /* SATScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208A4A82AA9445D0021BEC1 /* SATScores.swift */; };
+		328BC1DF2AAF746100D55351 /* NYC_Schools_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208A4912AA7FC5F0021BEC1 /* NYC_Schools_ProjectUITests.swift */; };
+		328BC1E12AAF749D00D55351 /* NYC_Schools_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3208A4912AA7FC5F0021BEC1 /* NYC_Schools_ProjectUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -288,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				328BC1DF2AAF746100D55351 /* NYC_Schools_ProjectUITests.swift in Sources */,
 				3208A4882AA7FC5F0021BEC1 /* NYC_Schools_ProjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,7 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3208A4922AA7FC5F0021BEC1 /* NYC_Schools_ProjectUITests.swift in Sources */,
+				328BC1E12AAF749D00D55351 /* NYC_Schools_ProjectUITests.swift in Sources */,
 				3208A4942AA7FC5F0021BEC1 /* NYC_Schools_ProjectUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

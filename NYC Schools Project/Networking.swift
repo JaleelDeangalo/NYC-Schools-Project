@@ -9,8 +9,6 @@ import Foundation
 import UIKit
 
 
-// School names only https://data.cityofnewyork.us/resource/s3k6-pzi2.json
-
 class SchoolsNetworking: NSObject {
     
     static let shared = SchoolsNetworking()
