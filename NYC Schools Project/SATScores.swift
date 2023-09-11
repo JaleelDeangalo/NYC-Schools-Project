@@ -88,12 +88,14 @@ class SATScoresView: UIViewController {
                 for data in self.viewModel.schoolsData {
                     DispatchQueue.main.async {
                         self.schoolTitle.text = data.schoolName
+        
+                        print(data.satMathAvgScore)
                         
-                        self.writingScore.text = "SAT Average Writing Score: \(data.satWritingAvgScore)"
+                        self.writingScore.text =  data.satWritingAvgScore == "s" ? "No writing score data available" : "SAT Average Writing Score: \(data.satWritingAvgScore)"
                         
-                        self.mathScore.text = "SAT Average Math Score: \(data.satMathAvgScore)"
+                        self.mathScore.text = data.satMathAvgScore == "s" ? "No math Score data available" : "SAT Average Math Score: \(data.satMathAvgScore)"
                         
-                        self.readingScore.text = "SAT Average Reading Score: \(data.satCriticalReadingAvgScore)"
+                        self.readingScore.text = data.satMathAvgScore == "s" ? "No reading score data availble" : "SAT Average Reading Score: \(data.satCriticalReadingAvgScore)"
                         
                      
                     }

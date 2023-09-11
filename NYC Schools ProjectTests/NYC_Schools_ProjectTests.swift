@@ -25,6 +25,22 @@ final class NYC_Schools_ProjectTests: XCTestCase {
         // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
     }
+    
+    func testSchoolsAPIUrl() {
+        
+      let url = URL(string: "https://data.cityofnewyork.us/resource/s3k6-pzi2.json?$limit=\(30)&$offset=\(3)")
+        
+        XCTAssertNotNil(url)
+        
+    }
+    
+    func testSchoolsSATScoresAPIUrl() async {
+        
+      let url = URL(string: "https://data.cityofnewyork.us/resource/f9bf-2cp4.json?dbn=\("")")
+        
+        XCTAssertNotNil(url)
+       
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.

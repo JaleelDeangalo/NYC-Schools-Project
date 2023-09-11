@@ -34,22 +34,6 @@ final class NYC_Schools_ProjectUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
-    
-    func testSchoolsAPIUrl() {
-        
-      let url = URL(string: "https://data.cityofnewyork.us/resource/s3k6-pzi2.json?$limit=\(30)&$offset=\(3)")
-        
-        XCTAssertNotNil(url)
-        
-    }
-    
-    func testSchoolsSATScoresAPIUrl() async {
-        
-      let url = URL(string: "https://data.cityofnewyork.us/resource/f9bf-2cp4.json?dbn=\("")")
-        
-        XCTAssertNotNil(url)
-       
-    }
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
